@@ -16,9 +16,12 @@ Or install it yourself as:
 
     $ gem install chatroom
 
+
 ## Usage
 
-TODO: Write usage instructions here
+Add the chatroom to your view. Example:
+
+   <%= render "chatroom/messages/chatroom" %>
 
 ## Contributing
 

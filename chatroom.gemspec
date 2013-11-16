@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Chatroom::VERSION
   spec.authors       = ["TsaiKoga"]
   spec.email         = ["969024089@qq.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{This gem can help you create a chatroom.}
+  spec.summary       = %q{}
+  spec.homepage      = "http://github.com/TsaiKoga/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
