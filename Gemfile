@@ -5,7 +5,6 @@ source 'http://ruby.taobao.org'
 gemspec
 
 gem 'rails', '~> 4.0.0'
-gem 'faye'
-gem 'private_pub'
-gem 'thin'
-gem 'rails_kindeditor'
+gem 'faye', '~> 1.0.0'
+gem 'private_pub', '~> 1.0.3'
+gem 'thin', '~> 1.5.1'

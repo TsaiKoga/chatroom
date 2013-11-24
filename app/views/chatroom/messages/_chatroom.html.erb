@@ -1,0 +1,15 @@
+<div id="chatroom">
+	<div class="min-chatroom">Chatroom</div>
+
+	<div class="chat-show">
+		<div id="chat">
+			<%= show_communications(@messages).html_safe %>
+		</div>
+	</div>
+	<%= render "chatroom/messages/form" %>
+</div>
+<%= subscribe_to "/messages/new" %>
+
+<div id="chatBeam">
+	<div class="max-chatroom">Chatroom</div>
+</div>

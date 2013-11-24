@@ -5,6 +5,35 @@ module Chatroom
 				buffer = <<-CONTENT
 		# validates
 		validates :content, :presence => true, :length => { :maximum => 250 }
+
+		EMOTIONS = [
+			"smile", "despressed", "like", "dull", "proud", "cry", "shy", "shut up",
+			"nap", "big cry", "awkward red", "angry", "naughty", "snag", "surprise", "bad",
+			"cool", "awkward", "scream", "vomit", "giggle", "lovely", "who cares", "zhuai",
+			"hungry", "sleepy", "scared", "sweat", "simper", "solider", "strive", "shout",
+			"questionaire", "hiss", "dizzy", "impantient", "be bombed", "skull", "hit head", "bye"
+		]
+		
+		# The created time of the message
+		def send_time
+		  self.created_at.strftime("%Y-%m-%d %H:%M:%d")
+		end
+
+		# convert the marks to html tags
+		def html_content
+			return "" if content.blank? 
+			str = content.gsub(/\\[bold\\]/, "<b>")
+			str = str.gsub(/\\[-bold\\]/, "</b>")
+			str = str.gsub(/\\[italic\\]/, "<i>")
+			str = str.gsub(/\\[-italic\\]/, "</i>")
+			str = str.gsub(/\\[color:(#.{6})\\]/){ |s| "<span style=\\"color:\#{$1}\\">" }
+			str = str.gsub(/\\[-color\\]/, "</span>")
+			str = str.gsub(/\\[(.+)\\]/) do |s|
+				emotion = EMOTIONS.index($1)
+				emotion.nil? ? "[\#{$1}]": "<img src=\\"/assets/emotions/\#{emotion}.gif\\" />" 
+			end
+			return str
+		end
 				CONTENT
 				buffer
 			end

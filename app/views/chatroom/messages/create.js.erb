@@ -1,0 +1,6 @@
+<% publish_to "/messages/new" do %>
+	$("#chat").append("<%= escape_javascript new_communication(@message).html_safe %>");
+<% end %>
+$("#chat").animate({scrollTop: $("#chat")[0].scrollHeight}, 100);
+
+$("#new_message_content").val(''); 

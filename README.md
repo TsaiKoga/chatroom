@@ -19,9 +19,25 @@ Or install it yourself as:
 
 ## Usage
 
+After you install Chatroom and add it to your Gemfile, you need to run the generator:
+
+    rails g chatroom:install
+
+Add the code below in your controller where will put the chatroom. Example:
+
+	  @messages = Message.all
+
 Add the chatroom to your view. Example:
 
-   <%= render "chatroom/messages/chatroom" %>
+    <%= render "chatroom/messages/chatroom" %>
+
+Migration Task:
+
+    rake db:migrate
+
+Start faye server in your terminal:
+
+    rackup private_pub.ru -s thin -E production
 
 ## Contributing
 
