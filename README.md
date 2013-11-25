@@ -39,6 +39,11 @@ Start faye server in your terminal:
 
     rackup private_pub.ru -s thin -E production
 
+Add User to the Message:
+Just add a migration and show user's name in message\_helper.rb
+
+		rails g migration add_user_id_to_messages
+
 ## Contributing
 
 1. Fork it
