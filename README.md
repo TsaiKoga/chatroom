@@ -1,6 +1,7 @@
 # Chatroom
 
-TODO: Write a gem description
+The chat room provides you to send messages that including emotions and different kinds
+font.
 
 ## Installation
 
@@ -40,7 +41,7 @@ Start faye server in your terminal:
     rackup private_pub.ru -s thin -E production
 
 Add User to the Message:
-Just add a migration and show user's name in message\_helper.rb
+Just add a migration and add your code to show user's name in message\_helper.rb
 
 		rails g migration add_user_id_to_messages
 
