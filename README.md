@@ -26,7 +26,7 @@ After you install Chatroom and add it to your Gemfile, you need to run the gener
 
 Add the code below in your controller where will put the chatroom. Example:
 
-	  @messages = Message.all
+    @messages = Message.all
 
 Add the chatroom to your view. Example:
 
@@ -43,7 +43,7 @@ Start faye server in your terminal:
 Add User to the Message:
 Just add a migration and add your code to show user's name in message\_helper.rb
 
-		rails g migration add_user_id_to_messages
+    rails g migration add_user_id_to_messages
 
 ## Contributing
 

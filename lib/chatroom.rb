@@ -1,12 +1,4 @@
 module Chatroom
-
-	require 'generators/chatroom/install_generator'
 	require 'chatroom/engine' if defined?(Rails)
-
-	# Default way to setup Chatroom. Run rails generate chatroom_install to create
-	# a fresh initializer with all configuration values.
-	# def self.setup
-		# yield self
-	# end
-
+	require 'generators/chatroom/install_generator'
 end

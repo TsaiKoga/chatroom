@@ -13,10 +13,7 @@ module Chatroom
 			class_option :routes, :desc => "Generate routes", :type => :boolean, :default => true
 
 			hook_for :orm
-			hook_for :views
-			hook_for :controllers
 			hook_for :assets
-			hook_for :helpers
 
 			def add_chatroom_routes
 				chatroom_route = <<-ROUTE

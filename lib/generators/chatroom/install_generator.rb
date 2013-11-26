@@ -1,4 +1,4 @@
-# require "rails/generators"
+require "rails/generators"
 module Chatroom
 	module Generators
 		class InstallGenerator < Rails::Generators::Base
@@ -9,6 +9,9 @@ module Chatroom
 
 			def install_app
 				generate "chatroom messages"
+				generate "chatroom:views"
+				generate "chatroom:helpers"
+				generate "chatroom:controllers"
 			end
 
 		end
