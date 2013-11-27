@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["969024089@qq.com"]
   spec.description   = %q{This gem can help you create a chatroom.}
   spec.summary       = %q{Chatroom provides functions, like adding emotions or changing text pattern.}
-  spec.homepage      = "http://github.com/TsaiKoga/"
+  spec.homepage      = "http://github.com/TsaiKoga/chatroom"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

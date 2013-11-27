@@ -40,10 +40,19 @@ Start faye server in your terminal:
 
     rackup private_pub.ru -s thin -E production
 
-Add User to the Message:
-Just add a migration and add your code to show user's name in message\_helper.rb
+#####Add User to the Message:
+
+Add a migration and add your code to show user's name in message\_helper.rb:
 
     rails g migration add_user_id_to_messages
+
+Add hidden field about user\_id in chatroom/message\_helper.rb so as create the message with its ower:
+
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+
+Allow params get the user\_id in chatroom/messages\_controller.rb:
+
+		params.require(:message).permit(:content, :user_id)
 
 ## Contributing
 
