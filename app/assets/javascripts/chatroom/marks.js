@@ -9,11 +9,11 @@
 
 function convertTagToMark(str) {
 		var emotions = [
-			"smile", "despressed", "like", "dull", "proud", "cry", "shy", "shut up",
-			"nap", "big cry", "awkward red", "angry", "naughty", "snag", "surprise", "bad",
-			"cool", "awkward", "scream", "vomit", "giggle", "lovely", "who cares", "zhuai",
+			"smile", "despressed", "like", "dull", "proud", "cry", "shy", "shut_up",
+			"nap", "big_cry", "awkward_red", "angry", "naughty", "snag", "surprise", "bad",
+			"cool", "awkward", "scream", "vomit", "giggle", "lovely", "who_cares", "zhuai",
 			"hungry", "sleepy", "scared", "sweat", "simper", "solider", "strive", "shout",
-			"questionaire", "hiss", "dizzy", "impantient", "be bombed", "skull", "hit head", "bye"
+			"questionaire", "hiss", "dizzy", "impantient", "be_bombed", "skull", "hit_head", "bye"
 		];
 		var s = "";
 
