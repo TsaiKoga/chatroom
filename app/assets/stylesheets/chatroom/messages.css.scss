@@ -242,6 +242,15 @@ table.chatroom-emotions-images {
 				}
 			}
 		}
+		div {
+			span.emotions-page {
+				&:hover {
+					color: red;
+					border: 1px solid $blueSea;
+				}
+				color: $blueSea;
+			}
+		}
 	}
 }
 

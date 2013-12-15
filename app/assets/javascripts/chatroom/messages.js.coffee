@@ -45,9 +45,13 @@ window.Messages =
 	# Editor: show all the emotions for selecting
 	constructEmotions: () ->
 		table = $("table.chatroom-emotions-images tbody")
+		page = $("<div><span class='emotions-page' style='float: left;'><</span><span class='emotions-page' style='float:right;'>></span></div>")
 		if !table.has("span").length
-			for i in [0...5]
-				row = $("<tr></tr>")
+			for i in [0...10]
+				if i < 5
+					row = $("<tr></tr>")
+				else
+					row = $("<tr style='display:none;'></tr>")
 				for j in [0...8]
 					n = i * 8 + j
 					img = $("<span></span>").addClass("emotion-img")
@@ -57,6 +61,17 @@ window.Messages =
 					cell = $("<td></td>").addClass("chat-cell").append(img)
 					row.append(cell)
 				table.append(row)
+			table.append(page)
+		Messages.emotionsPageTurning()
+		false
+
+	emotionsPageTurning: () ->
+		$("span.emotions-page").click ->
+			if $(this).html() == "&lt;"
+				$("table.chatroom-emotions-images tbody tr").toggle()
+			else if $(this).html() == "&gt;"
+				$("table.chatroom-emotions-images tbody tr").toggle()
+			false
 		false
 	
 	displayAllEmotions: () -> 
