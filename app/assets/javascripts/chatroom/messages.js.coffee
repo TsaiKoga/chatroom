@@ -11,6 +11,8 @@ window.Messages =
 
 	maxChatroom: () ->
 		$("#chatBeam").hide()
+		flash = $("#chatBeam .max-chatroom").attr("interval")
+		clearInterval(flash)
 		$("#chatroom").slideToggle()
 		false
 
