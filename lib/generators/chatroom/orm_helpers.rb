@@ -29,7 +29,9 @@ module Chatroom
 		# convert the marks to html tags
 		def html_content
 			return "" if content.blank? 
-			str = content.gsub(/\\r\\n/, "<br/>") 
+			str = content.gsub(/<(\\s*)(\\w+)(\\s*)>/){ |s| "<\\\#{$1}#{$2}#{$3}>" }
+			str = str.gsub(/<\\/(\\s*)(\\w+)(\\s*)>/){ |s| "<\\\/#{$1}#{$2}#{$3}>" }
+			str = str.gsub(/\\r\\n/, "<br/>") 
 			str = str.gsub(/(\\s)/, "&nbsp;")
 			str = str.gsub(/\\[bold\\]/, "<b>")
 			str = str.gsub(/\\[-bold\\]/, "</b>")

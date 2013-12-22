@@ -23,5 +23,4 @@ Gem::Specification.new do |spec|
 	spec.add_development_dependency "faye", "~> 1.0.0"
 	spec.add_development_dependency "private_pub", "~> 1.0.3"
 	spec.add_development_dependency "thin", "~> 1.5.1"
-	spec.add_development_dependency "will_paginate"
 end
