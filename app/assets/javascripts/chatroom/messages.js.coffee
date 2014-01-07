@@ -63,6 +63,7 @@ window.Messages =
 					row.append(cell)
 				table.append(row)
 			table.append(page)
+		$("span.emotions-page").off("click")
 		Messages.emotionsPageTurning()
 		false
 
